@@ -1,0 +1,44 @@
+REPORT SUMMARY
+
+File Paths:
+[FOLDER] aves_protein
+ |
+  ----- [FILE] aves_copy.fasta
+  ----- [FILE] aves_edited.fasta
+  ----- [FILE] aves_filtered.fasta
+  ----- [FILE] Report_aves.txt
+  ----- [FOLDER] supplementary
+         |
+          ----- [FILE] aves.aln
+          ----- [FILE] aves_original.aln
+          ----- [FILE] aves_identity.aln
+          ----- [FILE] aves_nonidentity.aln
+          ----- [FILE] aves_dissimilarity.aln
+          ----- [FILE] aves_plotcon.png
+          ----- [FILE] aves_plotcon.data
+          ----- [FILE] aves.motif
+
+
+DESCRIPTION:
+Analysis focuses on protein conservation in a certain taxonomic group, comparing a group of organisms listed in the input fasta file.
+1	A copy of fasta file was made.	[output: aves_copy.fasta]
+2	Sequences were cleaned to produce 2 lines per sequence and then, filtered. (optional: with tags 'PREDICTED' and/or 'LOW QUALITY PROTEIN')
+	[output: aves_edited.fasta (cleaning/re-formatted: 1 line=title, 1 line=sequences) & aves_filtered.fasta (filtered sequences)]
+3	Sequences were aligned with ClustalO.	[output: aves.aln]	(MODE: --force --threads=30)
+4	Aligned sequences were re-formatted using EMBOSS showalign to produce files below:
+		- Re-formats.	[output: aves_original.aln] (MODE: -show=a)
+		- Shows identical sequences. (based on sequence comparison)	[output: aves_identity.aln] (MODE: -show=i)
+		- Generates non-identical report. (based on sequence comparison) 	[output: aves_nonidentity.aln] (MODE: -show=n)
+		- Generates similarity report. (based on function/biochemical)	[output: aves_similarity.aln] (MODE: -show=s)
+		- Generates dissimilarity report. (based on function/biochemical)	[output: aves_dissimilarity.aln] (MODE: -show=d)
+5	Protein conservation plot was generated using EMBOSS plotcon.	[output: aves_plotcon.png & aves_plotcon.data]
+6	Motif search was done against PROSITE database using EMBOSS patmatmotif.	[output: aves.motif]
+
+
+DATA OVERVIEW
+
+Evolutionary conservation details:
+##Points 957
+##XminA 0.000000 XmaxA 0.000000 YminA 0.000000 YmaxA 0.000000
+##Xmin 0.000000 Xmax 957.000000 Ymin -0.000077 Ymax 0.608294
+##ScaleXmin 0.000000 ScaleXmax 0.000000 ScaleYmin 0.000000 ScaleYmax 0.000000

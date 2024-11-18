@@ -1,0 +1,34 @@
+########################################
+# Program: patmatmotifs
+# Rundate: Mon 18 Nov 2024 12:50:00
+# Commandline: patmatmotifs
+#    -sequence aves.fasta
+#    -outfile aves_protein/supplementary/aves.motif
+# Report_format: dbmotif
+# Report_file: aves_protein/supplementary/aves.motif
+########################################
+
+#=======================================
+#
+# Sequence: XP_040473657.1     from: 1   to: 358
+# HitCount: 1
+#
+# Full: No
+# Prune: Yes
+# Data_file: /usr/share/EMBOSS/data/PROSITE/prosite.lines
+#
+#=======================================
+
+Length = 4
+Start = position 139 of sequence
+End = position 142 of sequence
+
+Motif = AMIDATION
+
+LLSTAMGKKQSRTL
+     |  |
+   139  142
+
+
+#---------------------------------------
+#---------------------------------------
